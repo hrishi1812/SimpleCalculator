@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style type="text/css">
+		.main_div{
+			
+			height: 100vh;
+			width: 100vw;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.container{
+			padding: 20px;
+			height: 250px;
+			width: 200px;
+			border-radius: 10px;
+			background-color: lightskyblue;
+		}
+		input{
+			width: 40px;
+			height: 30px;
+			margin-bottom: 10px;
+			margin-left: 5px;
+			border: none;
+			font-family: Arial Black;
+			box-shadow: 0px 0px 3px red;
+		}
+		.in{
+			height: 40px;
+			width: 90%;
+			border-radius: 10px;
+			background-color: ghostwhite;
+			text-align: right;
+			text-emphasis-color: red;
+			border: none;
+			outline: none;
+
+		}
+		.c{
+			background-color: grey;
+		}
+		.d{
+			background-color: orange;
+		}
+		.equ{
+			width: 90px;
+			background-color: orange;
+		}
+	</style>
+	<title>Calculator</title>
+</head>
+<body>
+<div class="main_div">
+	<div class="container">
+		<form>
+			<div>
+			<input type="text" name="op"  disabled class="in">
+		</div>
+		<div>
+			<input type="button" value="c" class="c">
+			<input type="button" value="ac" onclick="op.value=''" class="c">
+			<input type="button" value="/" onclick="op.value+='/'" class="d">
+			<input type="button" value="%" onclick="op.value+='%'" class="d">
+			
+		</div>
+		<div>
+			<input type="button" value="9" onclick="op.value+=9">
+			<input type="button" value="8" onclick="op.value+=8">
+			<input type="button" value="7" onclick="op.value+=7">
+			<input type="button" value="+" onclick="op.value+='+'" class="d">
+			
+		</div>
+		<div>
+			<input type="button" value="6" onclick="op.value+=6">
+			<input type="button" value="5" onclick="op.value+=5">
+			<input type="button" value="4" onclick="op.value+=4">
+			<input type="button" value="-" onclick="op.value+='-'" class="d">
+			
+		</div>
+		<div>
+			<input type="button" value="3" onclick="op.value+=3">
+			<input type="button" value="2" onclick="op.value+=2">
+			<input type="button" value="1" onclick="op.value+=1">
+			<input type="button" value="*" onclick="op.value+='*'" class="d">
+			
+		</div>
+		<div>
+			<input type="button" value="0" onclick="op.value+=0 ">
+			<input type="button" value="." onclick="op.value+='.'"class="c">
+			<input type="button" value="=" onclick="op.value=eval(op.value)"class="equ">
+			
+		</div>
+		</form>
+	</div>
+</div>
+</body>
+</html>
